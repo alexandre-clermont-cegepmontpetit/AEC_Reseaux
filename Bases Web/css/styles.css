@@ -3,10 +3,10 @@ body {
   background-color: #343a40;
 }
 
-h2 {
-  color: blue;
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+  color: white;
 }
 
-p {
-  color: white;
+h1 {
+  margin-bottom: 1.5rem;
 }
