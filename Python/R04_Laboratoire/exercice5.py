@@ -7,16 +7,19 @@ switch = {
 }
 
 # Afficher le nom du switch et tous les VLANs
-print("Nom du switch :", switch["hostname"])
+print("=== SWITCH INITIAL ===")
+print("Hostname :", switch["hostname"])
 print("VLANs :", switch["vlans"])
 
 # Ajouter un VLAN à la liste
+print("\n=== APRÈS AJOUT DU VLAN 40 ===")
 switch["vlans"].append(40)
-print("\nAprès ajout du VLAN 40 :", switch["vlans"])
+print("VLANs :", switch["vlans"])
 
 # Supprimer un VLAN spécifique
+print("\n=== APRÈS SUPPRESSION DU VLAN 20 ===")
 switch["vlans"].remove(20)
-print("Après suppression du VLAN 20 :", switch["vlans"])
+print("VLANS :", switch["vlans"])
 
 # Vérifier si un VLAN spécifique existe
 if 30 in switch["vlans"]:
@@ -25,17 +28,17 @@ else:
     print("\nLe VLAN 30 n'existe pas dans la liste.")
 
 # Afficher le nombre total de VLANs
-print("Nombre total de VLANs :", len(switch["vlans"]))
+print("\nNombre total de VLANs :", len(switch["vlans"]))
 
 # Parcourir et afficher chaque VLAN individuellement
-print("\nListe des VLANs :")
+print("\n=== PARCOURS DES VLANs ===")
 for vlan in switch["vlans"]:
-    print("VLAN", vlan)
+    print("VLAN", ":", vlan)
 
 # Vérifier que chaque VLAN est dans la plage autorisée (10 à 100)
-print("\nVérification de la plage autorisée (10 à 100) :")
+print("\n=== VÉRIFICATION DES VLANs DANS LA PLAGE 10-100 ===")
 for vlan in switch["vlans"]:
     if 10 <= vlan <= 100:
-        print("VLAN", vlan, ": ✅ autorisé")
+        print("VLAN", vlan, "✅ autorisé")
     else:
-        print("VLAN", vlan, ": ❌ hors plage autorisée")
+        print("VLAN", vlan, "❌ hors plage autorisée")

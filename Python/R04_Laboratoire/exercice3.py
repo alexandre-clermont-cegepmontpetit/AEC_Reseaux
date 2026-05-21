@@ -9,19 +9,20 @@ utilisateurs = [
 ]
 
 # Afficher tous les utilisateurs
-print("Tous les utilisateurs :")
+print("=== TOUS LES UTILISATEURS ===")
 for u in utilisateurs:
     print(u)
 
 # Afficher seulement les utilisateurs admins
-print("\nUtilisateurs administrateurs :")
+print("\n=== UTILISATEURS ADMIN ===")
 for u in utilisateurs:
     if u["admin"]:
-        print(u["prenom"], u["nom"])
+        print(u)
 
 # Compter les utilisateurs dont l'âge est plus grand que 36
+print("\n=== UTILISATEURS AVEC ÂGE > 34 ===")
 nb = 0
 for u in utilisateurs:
-    if u["age"] > 36:
+    if u["age"] > 34:
         nb += 1
-print("\nNombre d'utilisateurs de plus de 36 ans :", nb)
+print("Nombre d'utilisateurs âgés de plus de 34 :", nb)

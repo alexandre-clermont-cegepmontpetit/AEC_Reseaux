@@ -10,15 +10,15 @@ processus = [
 ]
 
 # Afficher tous les processus
-print("Tous les processus :")
+print("=== TOUS LES PROCESSUS ===")
 for p in processus:
     print(p)
 
 # Afficher seulement les processus en cours
-print("\nProcessus en cours :")
+print("\n=== PROCESSUS EN COURS ===")
 for p in processus:
     if p["en_cours"]:
-        print(p["pid"], "-", p["nom"])
+        print(p)
 
 # Calculer le nombre de processus actifs
 nb_actifs = 0
