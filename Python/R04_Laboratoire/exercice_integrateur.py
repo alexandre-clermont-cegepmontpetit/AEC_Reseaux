@@ -3,10 +3,6 @@
 # Liste vide pour stocker les équipements (dictionnaires)
 equipements = []
 
-# Constantes pour la plage de VLANs autorisée
-VLAN_MIN = 10
-VLAN_MAX = 100
-
 
 def ajouter_equipement():
     # Demande les informations à l'utilisateur et ajoute l'équipement à la liste.
@@ -21,18 +17,15 @@ def ajouter_equipement():
     # Transformer les VLANs en liste d'entiers et valider la plage
     vlans = []
     for valeur in saisie_vlans.split(","):
-        valeur = valeur.strip()
-        if valeur == "":
-            continue
         vlan = int(valeur)
-        if VLAN_MIN <= vlan <= VLAN_MAX:
+        if 10 <= vlan <= 100:
             vlans.append(vlan)
         else:
             print("VLAN", vlan, "❌ hors plage autorisée (non ajouté)")
 
     # Convertir le champ admin en booléen
     saisie_admin = input("Administrable à distance ? (oui/non) : ")
-    admin = saisie_admin.strip().lower() == "oui"
+    admin = saisie_admin == "oui"
 
     # Créer le dictionnaire de l'équipement
     equipement = {
@@ -73,7 +66,7 @@ while True:
     elif choix == "2":
         afficher_equipements()
     elif choix == "3":
-        print("\nAu revoir !")
+        print("\nAu revoir ! \U0001F44B\U0001F604")
         break
     else:
-        print("Choix invalide. Veuillez réessayer.\n")
+        print("\nChoix invalide. Veuillez réessayer.\n")
