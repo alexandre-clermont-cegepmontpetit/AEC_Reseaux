@@ -1,6 +1,4 @@
 """
-TP1 - Mini système bancaire en Python
-=====================================
 Ce programme simule un petit systeme bancaire permettant à plusieurs
 utilisateurs de se connecter, de consulter leur solde, de déposer ou
 retirer de l'argent, de consulter leur historique et leurs statistiques.
@@ -10,7 +8,7 @@ from datetime import datetime
 
 
 # ---------------------------------------------------------------------------
-# DONNÉES : liste de comptes (étape 5 - plusieurs comptes)
+# DONNÉES : liste de comptes
 # Chaque compte est un dictionnaire. Tous les comptes sont dans une liste.
 # ---------------------------------------------------------------------------
 comptes = [
@@ -18,16 +16,16 @@ comptes = [
         "login": "alice",
         "motdepasse": "1234",
         "nom": "Alice",
-        "solde": 2450,
+        "solde": 2450.0,
         "historique": [
             {
                 "type": "depot",
-                "montant": 1200,
+                "montant": 1200.0,
                 "date": "2026-05-01 09:15:00"
             },
             {
                 "type": "retrait",
-                "montant": 200,
+                "montant": 200.0,
                 "date": "2026-05-02 14:20:00"
             }
         ]
@@ -36,7 +34,7 @@ comptes = [
         "login": "bob",
         "motdepasse": "abcd",
         "nom": "Bob",
-        "solde": 800,
+        "solde": 800.0,
         "historique": []
     }
 ]
