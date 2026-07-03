@@ -1,0 +1,26 @@
+[
+    {
+        "titre": "Faire le TP Python",
+        "priorite": 1,
+        "categorie": "Cours",
+        "terminee": true
+    },
+    {
+        "titre": "Acheter du lait",
+        "priorite": 3,
+        "categorie": "Personnel",
+        "terminee": false
+    },
+    {
+        "titre": "Préparer la réunion",
+        "priorite": 2,
+        "categorie": "Travail",
+        "terminee": true
+    },
+    {
+        "titre": "Réviser Python",
+        "priorite": 1,
+        "categorie": "Cours",
+        "terminee": false
+    }
+]

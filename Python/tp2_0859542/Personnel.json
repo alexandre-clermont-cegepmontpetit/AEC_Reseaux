@@ -1,0 +1,20 @@
+[
+    {
+        "titre": "Acheter du lait",
+        "priorite": 3,
+        "categorie": "Personnel",
+        "terminee": true
+    },
+    {
+        "titre": "Prendre rendez-vous chez le dentiste",
+        "priorite": 2,
+        "categorie": "Personnel",
+        "terminee": false
+    },
+    {
+        "titre": "Manger un bon sandwich",
+        "priorite": 3,
+        "categorie": "Personnel",
+        "terminee": false
+    }
+]

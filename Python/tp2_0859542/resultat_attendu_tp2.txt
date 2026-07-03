@@ -1,0 +1,140 @@
+
+============================================================
+TEST 1 - ajouter_tache
+============================================================
+
+Objectif :
+    Ajouter une nouvelle tâche dans la liste.
+
+Résultat attendu :
+    Une nouvelle tâche intitulée 'Réviser Python'
+    doit être ajoutée à la fin de la liste.
+
+1. Faire le TP Python | Catégorie : Cours | Priorité : 1 | État : À faire
+2. Acheter du lait | Catégorie : Personnel | Priorité : 3 | État : À faire
+3. Préparer la réunion | Catégorie : Travail | Priorité : 2 | État : Terminée
+4. Réviser Python | Catégorie : Cours | Priorité : 1 | État : À faire
+
+============================================================
+TEST 2 - rechercher_tache
+============================================================
+
+Objectif :
+    Rechercher une tâche existante.
+
+Résultat attendu :
+    La tâche 'Acheter du lait' doit être retournée.
+
+{'titre': 'Acheter du lait', 'priorite': 3, 'categorie': 'Personnel', 'terminee': False}
+
+Recherche d'une tâche inexistante
+
+Résultat attendu :
+    La fonction doit retourner None.
+
+None
+
+============================================================
+TEST 3 - terminer_tache
+============================================================
+
+Objectif :
+    Marquer une tâche comme terminée.
+
+Résultat attendu :
+    La tâche 'Faire le TP Python'
+    doit maintenant être affichée comme terminée.
+
+1. Faire le TP Python | Catégorie : Cours | Priorité : 1 | État : Terminée
+2. Acheter du lait | Catégorie : Personnel | Priorité : 3 | État : À faire
+3. Préparer la réunion | Catégorie : Travail | Priorité : 2 | État : Terminée
+4. Réviser Python | Catégorie : Cours | Priorité : 1 | État : À faire
+
+============================================================
+TEST 4 - filtrer_par_categorie
+============================================================
+
+Objectif :
+    Obtenir uniquement les tâches de la catégorie 'Cours'.
+
+Résultat attendu :
+    Seules les tâches dont la catégorie est 'Cours'
+    doivent être affichées.
+
+1. Faire le TP Python | Catégorie : Cours | Priorité : 1 | État : Terminée
+2. Réviser Python | Catégorie : Cours | Priorité : 1 | État : À faire
+
+============================================================
+TEST 5 - statistiques
+============================================================
+
+Objectif :
+    Afficher les statistiques des tâches.
+
+Résultat attendu :
+    Affichage :
+        - nombre total de tâches
+        - nombre de tâches terminées
+        - nombre de tâches non terminées
+
+Nombre total de tâches : 4
+Tâches terminées : 2
+Tâches non terminées : 2
+
+============================================================
+TEST 6 - sauvegarder_taches
+============================================================
+
+Objectif :
+    Sauvegarder les tâches dans un fichier JSON.
+
+Résultat attendu :
+    Le fichier taches_test.json doit être créé.
+
+Vérifiez la présence du fichier taches_test.json.
+
+============================================================
+TEST 7 - charger_taches
+============================================================
+
+Objectif :
+    Charger les tâches à partir du fichier JSON.
+
+Résultat attendu :
+    Les tâches précédemment sauvegardées
+    doivent être affichées.
+
+1. Faire le TP Python | Catégorie : Cours | Priorité : 1 | État : Terminée
+2. Acheter du lait | Catégorie : Personnel | Priorité : 3 | État : À faire
+3. Préparer la réunion | Catégorie : Travail | Priorité : 2 | État : Terminée
+4. Réviser Python | Catégorie : Cours | Priorité : 1 | État : À faire
+
+============================================================
+TEST 8 - sauvegarder_par_categorie
+============================================================
+
+Objectif :
+    Créer un fichier JSON par catégorie.
+
+Résultat attendu :
+    Des fichiers tels que :
+
+        Cours.json
+        Personnel.json
+        Travail.json
+
+    doivent être créés.
+
+Vérifiez les fichiers JSON générés.
+
+============================================================
+FIN DES TESTS
+============================================================
+
+Si tous les tests fonctionnent correctement :
+
+1. Les fonctions sont terminées.
+2. Vous pouvez maintenant utiliser le programme principal.
+3. Vous pouvez remplacer les données hardcodées
+   par le chargement à partir d'un fichier JSON.
+

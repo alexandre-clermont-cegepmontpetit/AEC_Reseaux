@@ -1,0 +1,38 @@
+[
+    {
+        "titre": "Faire le TP Python",
+        "priorite": 1,
+        "categorie": "Cours",
+        "terminee": false
+    },
+    {
+        "titre": "Réviser l'examen",
+        "priorite": 2,
+        "categorie": "Cours",
+        "terminee": true
+    },
+    {
+        "titre": "Acheter du lait",
+        "priorite": 3,
+        "categorie": "Personnel",
+        "terminee": false
+    },
+    {
+        "titre": "Prendre rendez-vous chez le dentiste",
+        "priorite": 2,
+        "categorie": "Personnel",
+        "terminee": false
+    },
+    {
+        "titre": "Préparer la réunion",
+        "priorite": 1,
+        "categorie": "Travail",
+        "terminee": true
+    },
+    {
+        "titre": "Corriger les laboratoires",
+        "priorite": 1,
+        "categorie": "Travail",
+        "terminee": false
+    }
+]
