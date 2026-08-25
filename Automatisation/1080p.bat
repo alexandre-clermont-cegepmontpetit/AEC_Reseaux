@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File 1080p.ps1
