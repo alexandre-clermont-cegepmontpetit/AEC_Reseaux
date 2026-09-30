@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Default</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/StyleSheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+        <div id="global">
+
+            <header>
+                <section id="logo">
+                   <asp:ImageButton ID="ImageButton1" ImageUrl="~/Images/Logo.png" runat="server" />
+                    <br/>
+                        <h1>Collège Edouard-Montpetit</h1>
+                        <p id="sous-titre">Formation continue</p>
+                    
+                </section>
+                <nav id="menu">
+
+                    <ul class="nav">
+                        <li><a href="Default.aspx">Accueil</a></li>
+                        <li><a href="InscriptionEtudiant.aspx">Inscription</a></li>
+                        <li class="dropdown">
+                            <a href="Administration.aspx" class="dropbtn">Administration</a>                           
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                            
+
+                        </li>
+                        <li><a href="APropos.aspx">A Propos</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <aside id="navigation">
+                <div class="sidebar">
+                    <div class="sidebar_top">   <h1>Bienvenue!</h1>  </div>
+                    <div class="sidebar_item">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="sidebar_base">                 </div>
+                </div>
+            </aside>
+            <div id="contenu">
+                <asp:ContentPlaceHolder ID="Contenu" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>©Copyright Collège Edouard-Montpetit 2017</footer>
+        </div>
+        
+        
+        
+       
+    </form>
+</body>
+</html>

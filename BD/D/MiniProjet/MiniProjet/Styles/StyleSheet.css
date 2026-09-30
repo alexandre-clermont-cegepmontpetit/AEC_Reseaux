@@ -1,0 +1,239 @@
+﻿/* Page */
+html {
+	font-size: 100%; 
+}
+body {
+	margin: 0;
+	padding: 10px 20px; 
+	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif; /* 3 */
+	font-size: .8em; 
+	line-height: 1.25; 
+	color: #6c6c6c;
+	background: white;
+    
+}
+#global {
+margin-left:5%;
+width:90%;
+border:solid 2px;
+padding:10px;
+border-radius: 10px;
+background-color:#eee;
+min-height:400px;
+}
+
+footer {
+        text-align:center;
+    font-size:10pt;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 .5em 0; 
+}
+h1, h2 {
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+	font-weight: normal; 
+}
+h1 {
+	font-size: 2em; 
+	font-style: italic;
+}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+
+/* Listes */
+ul, ol {
+	margin: .75em 0 .75em 24px;
+	padding: 0; 
+}
+ul {
+	list-style: square;
+}
+li {
+	margin: 0;
+	padding: 0;
+    
+}
+    li a {
+    color:white;
+    }
+
+/* Paragraphes */
+p {
+	margin: .75em 0;
+}
+li p, blockquote p {
+	margin: .5em 0;
+}
+
+
+/* Liens page d'accueil*/
+.formations a {
+	color: #fff;
+	text-decoration: none;
+}
+.formations a:hover, a:focus {
+	color: floralwhite;
+}
+
+
+/* Général */
+body {
+	color: #6c6c6c;
+	background:white ;
+}
+
+
+#navigation {
+	background: #0C696E;
+    color:#fff;
+    height:480px;
+	width: 25%;
+	float: left; 
+  
+}
+#navigation a {
+	color: #FF6533;
+}
+#navigation a:hover, #navigation a:focus {
+	background: #000000;
+}
+
+
+
+
+/* Page */
+body {
+	padding: 20px 50px; 
+    background-color:white;
+}
+
+/* En-tête */
+header {
+	padding: 5px 0 5px 0;
+    color:#0C696e;
+}
+header h1 {
+	margin: 0;
+}
+header h1 img {
+	float: left;
+	margin: 7px 20px 10px 0;
+    
+}
+
+#sous-titre {
+    margin: 4px 0 15px 0;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12pt;
+    
+}
+
+/* Menu de navigation horizontal */
+
+.nav {
+	height: 20px;
+	font-size: 14px;
+	margin-left: 0px;
+	padding: 15px 30px;
+	background: #242926;
+}
+
+/* Définir le style du lien:   */
+
+.nav a {
+	/* color: #669; */
+	color: #4BB5C1; /*#0C696e;*/
+    /*float: left;*/
+	font: bold 1.3em "Trebuchet MS",sans-serif;
+	margin-top: 0px;
+	padding: 0px 16px;
+	text-align: center;
+	text-decoration: none;
+}
+
+/*Changer le comportement quand on passe sur le lien:  */
+.nav a:hover {
+	background-color: #0C696E;
+	color: floralwhite;
+}            
+/*Pour un élément de liste indiquer qu’il sera horizontal :*/
+.nav li 
+{
+   display:inline;
+   padding:0;
+   margin:0;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+.dropdown:hover .dropbtn {
+    background-color: #0C696E;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #4BB5C1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+
+
+.dropdown-content a:hover {
+    background-color: #0C696E}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#ltlAuthenticatedUser {
+    color: #FF0000;
+}
+
+
+/* Contenu principal */
+#contenu {
+	color: #fff;
+	background: #4BB5C1; /*#0C696e;*/
+    margin-left: 26%; /* -> 4 */
+	margin-bottom: 20px;
+	padding: 10px 20px;
+    height:460px;
+}
+#contenu > :first-child {
+	margin-top: 10px;
+}
+#contenu p, #contenu li {
+	line-height: 1.5;
+}
+
+/* Mention de copyright */
+#copyright {
+	margin-left: 20%;
+}
