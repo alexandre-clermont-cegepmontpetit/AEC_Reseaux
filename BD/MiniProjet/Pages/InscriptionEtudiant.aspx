@@ -20,7 +20,7 @@
                     <asp:Label ID="Label1" runat="server" Text="Prénom:"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtPrenom" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPrenom" runat="server" MaxLength="50"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Champ Requis" ControlToValidate="txtPrenom"></asp:RequiredFieldValidator>
                 </td>
                
@@ -30,7 +30,7 @@
                     <asp:Label ID="Label4" runat="server" Text="Nom:"></asp:Label>
                 </td>
                 <td class="auto-style1">
-                    <asp:TextBox ID="txtNom" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtNom" runat="server" MaxLength="50"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Champ Requis" ControlToValidate="txtNom"></asp:RequiredFieldValidator>
                 </td>
                 
@@ -40,8 +40,8 @@
              <asp:Label ID="Label3" runat="server" Text="Adresse:"></asp:Label>
          </td>
          <td class="auto-style2">
-             <asp:TextBox ID="TextAdresse" runat="server"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Champ Requis" ControlToValidate="txtNom"></asp:RequiredFieldValidator>
+             <asp:TextBox ID="TextAdresse" runat="server" MaxLength="200"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Champ Requis" ControlToValidate="TextAdresse"></asp:RequiredFieldValidator>
          </td>
          
      </tr>
@@ -50,7 +50,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Courriel:"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtCourriel" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtCourriel" runat="server" MaxLength="100"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Adresse courriel non valide" ValidationExpression="\S+@\S+\.\S+" ControlToValidate="txtCourriel"></asp:RegularExpressionValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Champ Requis" ControlToValidate="txtCourriel"></asp:RequiredFieldValidator>
                 </td>
@@ -61,7 +61,8 @@
                     <asp:Label ID="Label5" runat="server" Text="Téléphone:"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPhone" runat="server" MaxLength="20"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Champ Requis" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
                 </td>
                 
             </tr>
@@ -86,7 +87,7 @@
                     Date de naissance</td>
                 <td>
                     <asp:TextBox ID="txtDate" runat="server" OnTextChanged="afficher_calendrier"></asp:TextBox>
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../Images/calendar.jpg" OnClick="ImageButton1_Click" Height="21px" Width="27px" />
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../Images/calendar.jpg" OnClick="ImageButton1_Click" CausesValidation="False" Height="21px" Width="27px" />
                     </td>
                 <td class="auto-style2">
                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" Visible="False" OnSelectionChanged="Calendar1_SelectionChanged">
@@ -107,6 +108,8 @@
                     &nbsp;</td>
                 <td>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="S'inscrire" />
+                    <br />
+                    <asp:Label ID="lblMessage" runat="server" EnableViewState="False"></asp:Label>
                     </td>
                 <td class="auto-style2">
                     &nbsp;</td>

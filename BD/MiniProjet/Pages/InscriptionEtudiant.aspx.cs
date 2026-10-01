@@ -71,11 +71,25 @@ public partial class Pages_Inscription : System.Web.UI.Page
             thisConnection.Close();
 
             //Vider les champs
+            ViderChamps();
         }
         catch (Exception ex)
         {
             Response.Write("Erreur: " + ex.Message);
         }
 
+    }
+    private void ViderChamps()
+    {
+        txtPrenom.Text = string.Empty;
+        txtNom.Text = string.Empty;
+        TextAdresse.Text = string.Empty;
+        txtCourriel.Text = string.Empty;
+        txtPhone.Text = string.Empty;
+        txtDate.Text = string.Empty;
+
+        RadioButtonList1.ClearSelection();
+        Calendar1.SelectedDates.Clear();
+        Calendar1.Visible = false;
     }
 }
