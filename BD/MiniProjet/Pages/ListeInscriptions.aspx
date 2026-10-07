@@ -117,9 +117,9 @@
     </style>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">--%>
     <%-- Résumé calculé par le code (ListeInscriptions.aspx.cs) --%>
-    <div class="resume-admin">
+    <%--<div class="resume-admin">
         <p class="resume-titre">Selon les filtres choisis :</p>
         <dl>
             <dt>Inscriptions</dt>
@@ -137,8 +137,8 @@
             <dt>Taux de réussite</dt>
             <dd><asp:Literal ID="litReussite" runat="server" Text="—" /></dd>
         </dl>
-    </div>
-</asp:Content>
+    </div>--%>
+<%--</asp:Content>--%>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Contenu" Runat="Server">
 

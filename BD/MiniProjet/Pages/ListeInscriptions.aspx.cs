@@ -182,43 +182,43 @@ public partial class Pages_ListeInscriptions : System.Web.UI.Page
 
         int nombre = inscriptions.Rows.Count;
         lblNombre.Text = nombre + (nombre > 1 ? " inscriptions trouvées." : " inscription trouvée.");
-        AfficherResume(inscriptions);
+        //AfficherResume(inscriptions);
     }
 
     // Résumé de la barre latérale, calculé sur les lignes trouvées
-    private void AfficherResume(DataTable inscriptions)
-    {
-        HashSet<int> etudiants = new HashSet<int>();
-        int notesSaisies = 0, enAttente = 0, manquantes = 0, reussites = 0;
-        decimal somme = 0;
+    //private void AfficherResume(DataTable inscriptions)
+    //{
+    //    HashSet<int> etudiants = new HashSet<int>();
+    //    int notesSaisies = 0, enAttente = 0, manquantes = 0, reussites = 0;
+    //    decimal somme = 0;
 
-        foreach (DataRow ligne in inscriptions.Rows)
-        {
-            etudiants.Add(Convert.ToInt32(ligne["Matricule"]));
+    //    foreach (DataRow ligne in inscriptions.Rows)
+    //    {
+    //        etudiants.Add(Convert.ToInt32(ligne["Matricule"]));
 
-            if (ligne["Note"] == DBNull.Value)
-            {
-                if ((string)ligne["Resultat"] == "Note manquante") manquantes++;
-                else enAttente++;
-            }
-            else
-            {
-                decimal note = Convert.ToDecimal(ligne["Note"]);
-                notesSaisies++;
-                somme += note;
-                if (note >= 60) reussites++;
-            }
-        }
+    //        if (ligne["Note"] == DBNull.Value)
+    //        {
+    //            if ((string)ligne["Resultat"] == "Note manquante") manquantes++;
+    //            else enAttente++;
+    //        }
+    //        else
+    //        {
+    //            decimal note = Convert.ToDecimal(ligne["Note"]);
+    //            notesSaisies++;
+    //            somme += note;
+    //            if (note >= 60) reussites++;
+    //        }
+    //    }
 
-        litInscriptions.Text = inscriptions.Rows.Count.ToString();
-        litEtudiants.Text = etudiants.Count.ToString();
-        litNotesSaisies.Text = notesSaisies.ToString();
-        litEnAttente.Text = enAttente.ToString();
-        litManquantes.Text = manquantes.ToString();
-        // La culture fr-CA (ligne Page du .aspx) donne la virgule décimale : 78,5
-        litMoyenne.Text = notesSaisies > 0 ? (somme / notesSaisies).ToString("0.#") : "—";
-        litReussite.Text = notesSaisies > 0 ? (100m * reussites / notesSaisies).ToString("0") + "\u00A0%" : "—";
-    }
+    //    litInscriptions.Text = inscriptions.Rows.Count.ToString();
+    //    litEtudiants.Text = etudiants.Count.ToString();
+    //    litNotesSaisies.Text = notesSaisies.ToString();
+    //    litEnAttente.Text = enAttente.ToString();
+    //    litManquantes.Text = manquantes.ToString();
+    //    // La culture fr-CA (ligne Page du .aspx) donne la virgule décimale : 78,5
+    //    litMoyenne.Text = notesSaisies > 0 ? (somme / notesSaisies).ToString("0.#") : "—";
+    //    litReussite.Text = notesSaisies > 0 ? (100m * reussites / notesSaisies).ToString("0") + "\u00A0%" : "—";
+    //}
 
     // Remplit une liste déroulante : un premier choix « Tous », puis les lignes de la requête
     private static void RemplirListe(DropDownList liste, string requete, string colonneValeur, string texteTous)
